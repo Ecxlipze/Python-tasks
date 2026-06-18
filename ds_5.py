@@ -8,3 +8,4 @@ print("After adding rice:", cart)
 
 cart.remove("bread")
 print("After removing bread:", cart)
+ 
