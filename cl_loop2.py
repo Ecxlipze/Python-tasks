@@ -7,4 +7,6 @@ for number in range(1, 51):
         print("Fizz")
     elif number % 5 == 0:
         print("Buzz")
+    else:
+        print(number)
 
