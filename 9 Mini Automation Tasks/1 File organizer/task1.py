@@ -2,15 +2,15 @@
 import os
 import shutil
 
-folder = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"]
 doc_extensions = [".txt", ".pdf", ".doc", ".docx"]
 
-for filename in os.listdir(folder):
+for filename in os.listdir(BASE_DIR):
     if filename == "task1.py":
         continue
-    source_path = os.path.join(folder, filename)
+    source_path = os.path.join(BASE_DIR, filename)
 
     if os.path.isdir(source_path):
         continue
@@ -19,11 +19,11 @@ for filename in os.listdir(folder):
     extension = extension.lower()
 
     if extension in image_extensions:
-        target_folder = "images"
+        target_folder = os.path.join(BASE_DIR, "images")
     elif extension in doc_extensions:
-        target_folder = "docs"
+        target_folder = os.path.join(BASE_DIR, "docs")
     else:
-        target_folder = "others"
+        target_folder = os.path.join(BASE_DIR, "others")
 
     if not os.path.exists(target_folder):
         os.mkdir(target_folder)
