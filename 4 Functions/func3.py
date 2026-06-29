@@ -12,3 +12,4 @@ word = "Education"
 vowel_count = count(word)
 
 print("Vowels:", vowel_count)
+
