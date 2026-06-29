@@ -6,8 +6,14 @@ students = {
     "Ahmed": 70
 }
 
-total_marks = students["Ali"] + students["Sara"] + students["Ahmed"] 
+total_marks = 0
+for marks in students.values():
+    total_marks = total_marks + marks
 average_marks = total_marks / len(students)
 
-print("Student marks:", students)
+# print("Student marks:", students)
 print("Average marks:", average_marks)
+
+for name, marks in students.items():
+    print(name, ":", marks)
+
